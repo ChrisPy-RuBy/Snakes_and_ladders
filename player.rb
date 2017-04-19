@@ -1,8 +1,9 @@
 class Player
 
- attr_accessor :name, :player_position
+ attr_accessor :position
+ attr_reader :name
 
-  def initialize(name, player_postion)
+  def initialize(name)
     @name = name
     @position = 1
   end
@@ -15,5 +16,8 @@ class Player
   #   @player_position 
   # end
 
+  def move(dice)
+    @position += dice
+  end
 
 end

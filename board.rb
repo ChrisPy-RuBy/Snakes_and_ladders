@@ -1,9 +1,9 @@
 class Board
   attr_reader :board_array
 
-  def initialize()
-    @board_array = [0, 1, 2, 3, 4, 5]
-
+  def initialize(board_array, index_value)
+    @board_array = board_array
+    @index_value = index_value
   end
 
   def empty_board()
@@ -12,6 +12,10 @@ class Board
 
   def board_length()
     @board_array.length
+  end
+
+  def lookup(index_value)
+    return @board_array[index_value]
   end
 
 
